@@ -2,7 +2,7 @@ import java.util.*;
 
 public class DigitFrequency {
 
-    // 🔲🔲🔲 fn declaration...
+    // 🪄🪄🪄 fn declaration...
     public static int findDigitFreq(int n, int d)
     {   int df = 0;
 
