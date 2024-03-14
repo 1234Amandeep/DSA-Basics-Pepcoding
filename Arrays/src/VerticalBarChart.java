@@ -31,7 +31,7 @@ public class VerticalBarChart {
       // 🔑🔑🔑 logic
       for(int i = 0; i < max; i++)
       {
-        // magic
+        // ✴️✴️✴️ magic
         for(int j = 0; j < nums.length; j++)
         {
           // 🔑🔑🔑 super logic
