@@ -32,14 +32,14 @@ public class SumOfTwoArrays {
       }
 
       // 🔑🔑🔑 logic
-      int[] sum = new int[nums1.length > nums2.length ? nums1.length : nums2.length ];
+      int[] sum = new int[nums1.length > nums2.length ? nums1.length : nums2.length];
 
       
       // 🔑🔑🔑 super logic
       int i = nums1.length - 1;
       int j = nums2.length - 1;
       int k = sum.length - 1;
-      
+
       int carry = 0;
       while (k >= 0)
       {
