@@ -1,6 +1,19 @@
 import java.util.*;
 
 public class RotatingArray {
+
+  public static void ReverseArr(int[] a, int sPnt, int ePnt)
+  {
+    while(sPnt < ePnt)
+    {
+      int temp = a[sPnt];
+      a[sPnt] = a[ePnt];
+      a[ePnt] = temp;
+
+      sPnt++;
+      ePnt--;
+    }
+  }
   public static void main(String[] args) throws Exception {
     // 🔥🔥🔥 write code from here...
     try(Scanner scn = new Scanner(System.in))
@@ -19,41 +32,26 @@ public class RotatingArray {
       }
 
       // how much to rotate
-
-
       int k = scn.nextInt();
+
+      // for larger nums
+      k = k % arr.length;
       if(k < 0)
       {
-        k = arr.length + k;
+        k += arr.length;
       }
 
-      // 🔑🔑🔑 logic
+      // 🔑🔑🔑 super logic 
       // rotating k times
-      for(int i = 0; i < k % arr.length; i++)
-      {
-        int holder1 = 0;
-        int holder2;
-        int next = 1;
-        for(int current = 0; current < arr.length; current++)
-        {
-          next = next % arr.length;
+      
+      // part1 reversal
+      ReverseArr(arr,0, arr.length - k - 1);
 
-          if(current == 0)
-          {
-            holder1 = arr[next];
-            arr[next] = arr[current];
-          }
-          else
-          {
-            holder2 = arr[next];
-            arr[next] = holder1;
-            holder1 = holder2;
-          }
+      // part2 reversal 
+      ReverseArr(arr, arr.length - k, arr.length - 1);
 
-          next++;
-        }
-
-      }
+      // whole reversal
+      ReverseArr(arr, 0, arr.length - 1);
 
       // just displaying
       int j = 0;
