@@ -22,8 +22,8 @@ public class SubArrays {
       // 🔑🔑🔑 logic
       for(int i = 0; i < arr.length; i++)
       {
-        // magic
-        for(int k = 0; k < arr.length - i; k ++) // [1, 2, 3, 4]
+        // magic for creating sub array
+        for(int k = 0; k < arr.length - i; k ++)
         {
           int[] sub = new int[k + 1];
           int m = i;
