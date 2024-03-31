@@ -37,7 +37,7 @@ public class Search2dArray {
           j--;
         }
       }
-      System.out.println("not found");
+      System.out.println("not found!");
     }
   }
 }
