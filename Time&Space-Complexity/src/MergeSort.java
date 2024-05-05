@@ -15,7 +15,6 @@ public class MergeSort {
                 x++;
             }
             
-
             System.out.println("Sorted arr: ");
             //📢📢📢 fn call
             int[] res = mergeSort(arr, 0, arr.length - 1);
@@ -42,27 +41,11 @@ public class MergeSort {
       int[] leftSortedArr = mergeSort(arr, lo, mid);
       int[] rightSortedArr = mergeSort(arr, mid + 1,  hi);
       int[] fullSortedArr = mergeTwoSortedArr(leftSortedArr, rightSortedArr);
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
+ 
       return fullSortedArr;
     }
 
-
-
-
-
-
-    
-
-    //🪄🪄🪄 Fn declaration
+    //🪄🪄🪄 Fn declaration from previous
     public static int[] mergeTwoSortedArr(int[] a, int[] b)
     {
         //🔑🔑🔑 logic
